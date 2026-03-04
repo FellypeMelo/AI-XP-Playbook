@@ -4,20 +4,28 @@
 
 @layer base {
 	html {
-		@apply antialiased;
+		@apply antialiased overflow-x-hidden;
 	}
 	
 	body {
-		@apply bg-white text-black min-h-screen;
+		@apply bg-swiss-paper text-swiss-ink min-h-screen overflow-x-hidden selection:bg-swiss-ink selection:text-white;
 	}
 
-	::selection {
-		@apply bg-black text-white;
+	h1, h2, h3, h4, h5, h6 {
+		@apply font-serif tracking-academic;
 	}
 }
 
 @layer components {
+	.swiss-container {
+		@apply max-w-5xl mx-auto px-lg md:px-3xl py-2xl md:py-huge;
+	}
+
 	.link-underline {
-		@apply relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-black after:transition-all after:duration-300 hover:after:w-full;
+		@apply relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-swiss-ink after:transition-all after:duration-300 hover:after:w-full;
+	}
+
+	.swiss-divider {
+		@apply border-t-hairline border-swiss-divider;
 	}
 }
