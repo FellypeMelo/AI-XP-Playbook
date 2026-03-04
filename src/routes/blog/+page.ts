@@ -1,8 +1,11 @@
-import { getPosts } from '$lib/utils/posts';
+import { PostService } from '../../domain/post/post.service';
+import { PostRepositoryImpl } from '../../infra/post/post.repository.impl';
 
 export const prerender = true;
 
 export const load = async () => {
-	const posts = getPosts();
+	const repository = new PostRepositoryImpl();
+	const service = new PostService(repository);
+	const posts = await service.getAllPosts();
 	return { posts };
 };

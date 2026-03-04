@@ -44,6 +44,7 @@ declare module '$env/static/private' {
 	export const AMDRMSDKPATH: string;
 	export const ANTIGRAVITY_CLI_ALIAS: string;
 	export const APPDATA: string;
+	export const BASE_URL: string;
 	export const ChocolateyInstall: string;
 	export const ChocolateyLastPathUpdate: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
@@ -53,6 +54,7 @@ declare module '$env/static/private' {
 	export const CommonProgramW6432: string;
 	export const COMPUTERNAME: string;
 	export const ComSpec: string;
+	export const DEV: string;
 	export const DriverData: string;
 	export const EDITOR: string;
 	export const EFC_11164_1262719628: string;
@@ -62,10 +64,13 @@ declare module '$env/static/private' {
 	export const EFC_11164_3789132940: string;
 	export const FPS_BROWSER_APP_PROFILE_STRING: string;
 	export const FPS_BROWSER_USER_PROFILE_STRING: string;
+	export const GEMINI_CLI: string;
 	export const GEMINI_CLI_IDE_AUTH_TOKEN: string;
 	export const GEMINI_CLI_IDE_SERVER_PORT: string;
 	export const GEMINI_CLI_IDE_WORKSPACE_PATH: string;
+	export const GEMINI_CLI_NO_RELAUNCH: string;
 	export const GIT_ASKPASS: string;
+	export const GIT_PAGER: string;
 	export const GOPATH: string;
 	export const HOME: string;
 	export const HOMEDRIVE: string;
@@ -75,6 +80,7 @@ declare module '$env/static/private' {
 	export const LEVEL_ZERO_V1_SDK_PATH: string;
 	export const LOCALAPPDATA: string;
 	export const LOGONSERVER: string;
+	export const MODE: string;
 	export const NODE: string;
 	export const NODE_ENV: string;
 	export const npm_command: string;
@@ -100,6 +106,7 @@ declare module '$env/static/private' {
 	export const OneDrive: string;
 	export const OneDriveConsumer: string;
 	export const OS: string;
+	export const PAGER: string;
 	export const Path: string;
 	export const PATHEXT: string;
 	export const POWERSHELL_TELEMETRY_OPTOUT: string;
@@ -107,6 +114,7 @@ declare module '$env/static/private' {
 	export const PROCESSOR_IDENTIFIER: string;
 	export const PROCESSOR_LEVEL: string;
 	export const PROCESSOR_REVISION: string;
+	export const PROD: string;
 	export const ProgramData: string;
 	export const ProgramFiles: string;
 	export const ProgramW6432: string;
@@ -117,13 +125,16 @@ declare module '$env/static/private' {
 	export const SystemDrive: string;
 	export const SystemRoot: string;
 	export const TEMP: string;
+	export const TERM: string;
 	export const TERM_PROGRAM: string;
 	export const TERM_PROGRAM_VERSION: string;
+	export const TEST: string;
 	export const TMP: string;
 	export const USERDOMAIN: string;
 	export const USERDOMAIN_ROAMINGPROFILE: string;
 	export const USERNAME: string;
 	export const USERPROFILE: string;
+	export const VITEST: string;
 	export const VS140COMNTOOLS: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
@@ -225,6 +236,7 @@ declare module '$env/dynamic/private' {
 		AMDRMSDKPATH: string;
 		ANTIGRAVITY_CLI_ALIAS: string;
 		APPDATA: string;
+		BASE_URL: string;
 		ChocolateyInstall: string;
 		ChocolateyLastPathUpdate: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;
@@ -234,6 +246,7 @@ declare module '$env/dynamic/private' {
 		CommonProgramW6432: string;
 		COMPUTERNAME: string;
 		ComSpec: string;
+		DEV: string;
 		DriverData: string;
 		EDITOR: string;
 		EFC_11164_1262719628: string;
@@ -243,10 +256,13 @@ declare module '$env/dynamic/private' {
 		EFC_11164_3789132940: string;
 		FPS_BROWSER_APP_PROFILE_STRING: string;
 		FPS_BROWSER_USER_PROFILE_STRING: string;
+		GEMINI_CLI: string;
 		GEMINI_CLI_IDE_AUTH_TOKEN: string;
 		GEMINI_CLI_IDE_SERVER_PORT: string;
 		GEMINI_CLI_IDE_WORKSPACE_PATH: string;
+		GEMINI_CLI_NO_RELAUNCH: string;
 		GIT_ASKPASS: string;
+		GIT_PAGER: string;
 		GOPATH: string;
 		HOME: string;
 		HOMEDRIVE: string;
@@ -256,6 +272,7 @@ declare module '$env/dynamic/private' {
 		LEVEL_ZERO_V1_SDK_PATH: string;
 		LOCALAPPDATA: string;
 		LOGONSERVER: string;
+		MODE: string;
 		NODE: string;
 		NODE_ENV: string;
 		npm_command: string;
@@ -281,6 +298,7 @@ declare module '$env/dynamic/private' {
 		OneDrive: string;
 		OneDriveConsumer: string;
 		OS: string;
+		PAGER: string;
 		Path: string;
 		PATHEXT: string;
 		POWERSHELL_TELEMETRY_OPTOUT: string;
@@ -288,6 +306,7 @@ declare module '$env/dynamic/private' {
 		PROCESSOR_IDENTIFIER: string;
 		PROCESSOR_LEVEL: string;
 		PROCESSOR_REVISION: string;
+		PROD: string;
 		ProgramData: string;
 		ProgramFiles: string;
 		ProgramW6432: string;
@@ -298,13 +317,16 @@ declare module '$env/dynamic/private' {
 		SystemDrive: string;
 		SystemRoot: string;
 		TEMP: string;
+		TERM: string;
 		TERM_PROGRAM: string;
 		TERM_PROGRAM_VERSION: string;
+		TEST: string;
 		TMP: string;
 		USERDOMAIN: string;
 		USERDOMAIN_ROAMINGPROFILE: string;
 		USERNAME: string;
 		USERPROFILE: string;
+		VITEST: string;
 		VS140COMNTOOLS: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;

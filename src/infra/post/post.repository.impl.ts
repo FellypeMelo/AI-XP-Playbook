@@ -39,4 +39,10 @@ export class PostRepositoryImpl implements PostRepository {
 			published: module.metadata.published
 		};
 	}
+
+	async getContent(slug: string): Promise<any> {
+		const path = `/src/posts/${slug}.md`;
+		const module = this.postModules[path] as any;
+		return module?.default || null;
+	}
 }

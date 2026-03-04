@@ -1,7 +1,10 @@
 import type { PageLoad } from './$types';
-import { getPosts } from '$lib/utils/posts';
+import { PostService } from '../domain/post/post.service';
+import { PostRepositoryImpl } from '../infra/post/post.repository.impl';
 
 export const load: PageLoad = async () => {
-	const posts = await getPosts();
+	const repository = new PostRepositoryImpl();
+	const service = new PostService(repository);
+	const posts = await service.getAllPosts();
 	return { posts };
 };
