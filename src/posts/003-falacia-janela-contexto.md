@@ -1,6 +1,6 @@
 ---
-title: A Falácia da Janela de Contexto Infinita (Sliding Window Attention)
-description: Modelos contemporâneos de IA propõem memorizar milhões de tokens em contexto, porém os limites matemáticos revelam severas perdas estruturais.
+title: "A Falácia da Janela de Contexto Infinita (Sliding Window Attention)"
+description: "Modelos contemporâneos de IA propõem memorizar milhões de tokens em contexto, porém os limites matemáticos revelam severas perdas estruturais."
 date: 2026-03-04
 tags:
   - sliding-window

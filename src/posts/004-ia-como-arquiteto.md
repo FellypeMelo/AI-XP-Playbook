@@ -1,6 +1,6 @@
 ---
-title: IA como Arquiteto Sênior de Software
-description: Como balancear os impactos entre descarregamento cognitivo e sobrecarga cognitiva no design de sistemas complexos com Modelos de IA Generativa.
+title: "IA como Arquiteto Sênior de Software"
+description: "Como balancear os impactos entre descarregamento cognitivo e sobrecarga cognitiva no design de sistemas complexos com Modelos de IA Generativa."
 date: 2026-03-04
 tags:
   - arquitetura

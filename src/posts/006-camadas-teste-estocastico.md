@@ -1,6 +1,6 @@
 ---
-title: O Paradigma das 7 Camadas de Teste em Ambientes Estocásticos
-description: Mergulhando nas práticas de defesa absoluta do AI-XP. Descubra como enjaular a mutação da IA em pastas efêmeras em monorepos via DevCaches e Rsync.
+title: "O Paradigma das 7 Camadas de Teste em Ambientes Estocásticos"
+description: "Mergulhando nas práticas de defesa absoluta do AI-XP. Descubra como enjaular a mutação da IA em pastas efêmeras em monorepos via DevCaches e Rsync."
 date: 2026-03-04
 tags:
   - testes

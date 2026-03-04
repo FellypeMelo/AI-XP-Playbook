@@ -1,6 +1,6 @@
 ---
-title: LLMs como "Loot Boxes" e a Economia Predatória
-description: Análise profunda do escopo empresarial das APIs de IA, onde a funcionalidade do "Deep Thinking" mascara loops recursivos caros e baixa eficiência.
+title: "LLMs como \"Loot Boxes\" e a Economia Predatória"
+description: "Análise profunda do escopo empresarial das APIs de IA, onde a funcionalidade do \"Deep Thinking\" mascara loops recursivos caros e baixa eficiência."
 date: 2026-03-04
 tags:
   - economia

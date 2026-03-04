@@ -1,6 +1,6 @@
 ---
-title: Limites Arquiteturais e a Economia de Tokens nas LLMs
-description: Desmistificando o falso cenário de janelas de contexto infinitas, o problema da "Sliding Window Attention" e as armadilhas na hiperprodutividade dos modelos.
+title: "Limites Arquiteturais e a Economia de Tokens nas LLMs"
+description: "Desmistificando o falso cenário de janelas de contexto infinitas, o problema da \"Sliding Window Attention\" e as armadilhas na hiperprodutividade dos modelos."
 date: 2026-03-04
 tags:
   - tdd

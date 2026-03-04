@@ -1,6 +1,6 @@
 ---
-title: O Framework AI-XP
-description: Entenda como o Extreme Programming fornece a base estrutural rigorosa e matemática para orquestrar agentes IA autônomos dentro do modelo AI-XP.
+title: "O Framework AI-XP"
+description: "Entenda como o Extreme Programming fornece a base estrutural rigorosa e matemática para orquestrar agentes IA autônomos dentro do modelo AI-XP."
 date: 2026-03-04
 tags:
   - ai-xp

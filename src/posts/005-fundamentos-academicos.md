@@ -1,6 +1,6 @@
 ---
-title: A Supremacia dos Fundamentos Acadêmicos na Era das LLMs
-description: Entenda por que a IA agêntica torna os fundamentos algébricos, VRAMs e bases de Computação mais indispensáveis do que nunca na carreira Sênior.
+title: "A Supremacia dos Fundamentos Acadêmicos na Era das LLMs"
+description: "Entenda por que a IA agêntica torna os fundamentos algébricos, VRAMs e bases de Computação mais indispensáveis do que nunca na carreira Sênior."
 date: 2026-03-04
 tags:
   - hardware

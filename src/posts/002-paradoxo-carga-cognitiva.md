@@ -1,6 +1,6 @@
 ---
-title: O Paradoxo da Carga Cognitiva no Design de IAs Generativas
-description: Entenda como balancear o descarregamento de tarefas maçantes da arquitetura e evitar a sobrecarga trazida pela análise infinita de scripts alucinados da máquina.
+title: "O Paradoxo da Carga Cognitiva no Design de IAs Generativas"
+description: "Entenda como balancear o descarregamento de tarefas maçantes da arquitetura e evitar a sobrecarga trazida pela análise infinita de scripts alucinados da máquina."
 date: 2026-03-04
 tags:
   - arquitetura
