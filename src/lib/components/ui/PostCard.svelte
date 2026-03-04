@@ -6,37 +6,30 @@
 	}>();
 </script>
 
-<article class="group border-2 border-technical-slate-200 p-lg hover:border-technical-slate-900 transition-all duration-300 bg-white hover:shadow-xl">
+<article class="group border-t-hairline border-swiss-divider py-xl first:border-t-0 transition-all duration-500 hover:bg-white hover:px-lg -mx-lg">
 	<a href="/blog/{post.slug}" class="block">
-		<div class="flex flex-col gap-md">
-			<div class="flex justify-between items-baseline border-b border-technical-slate-100 pb-sm">
-				<time class="text-xs font-mono text-technical-slate-400">
-					[{post.date.replace(/-/g, '.')}]
+		<div class="grid md:grid-cols-12 gap-lg items-start">
+			<div class="md:col-span-3">
+				<time class="text-[10px] font-mono text-swiss-muted uppercase tracking-[0.2em]">
+					{post.date.replace(/-/g, '/')}
 				</time>
-				{#if post.tags}
-					<div class="flex gap-xs">
-						{#each post.tags as tag}
-							<span class="text-[10px] uppercase font-bold tracking-widest text-brand-blue">
-								#{tag}
-							</span>
-						{/each}
-					</div>
-				{/if}
 			</div>
 			
-			<div>
-				<h3 class="text-xl font-display font-black uppercase tracking-tight group-hover:text-brand-blue transition-colors">
+			<div class="md:col-span-7">
+				<h3 class="text-2xl font-serif font-semibold tracking-academic text-swiss-ink mb-md group-hover:text-swiss-accent transition-colors">
 					{post.title}
 				</h3>
-				<p class="text-technical-slate-600 mt-sm line-clamp-2 font-sans leading-relaxed">
+				<p class="text-sm text-swiss-muted font-sans leading-relaxed line-clamp-2">
 					{post.description}
 				</p>
 			</div>
 
-			<div class="pt-sm flex justify-end">
-				<span class="text-xs font-mono font-bold uppercase tracking-widest group-hover:translate-x-1 transition-transform">
-					Ler Spec →
-				</span>
+			<div class="md:col-span-2 flex justify-end">
+				{#if post.tags && post.tags.length > 0}
+					<span class="text-[9px] font-mono text-swiss-muted uppercase tracking-widest border-hairline border-swiss-divider px-sm py-xs">
+						{post.tags[0]}
+					</span>
+				{/if}
 			</div>
 		</div>
 	</a>

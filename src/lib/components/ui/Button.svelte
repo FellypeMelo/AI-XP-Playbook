@@ -6,12 +6,12 @@
 		type?: 'button' | 'submit' | 'reset';
 	}>();
 
-	const baseStyles = "px-md py-sm font-mono text-sm uppercase tracking-wider transition-all duration-200 active:scale-95 border-2";
+	const baseStyles = "px-xl py-md font-sans text-xs font-bold uppercase tracking-[0.2em] transition-all duration-300 active:opacity-80 border-hairline";
 	
 	const variants = {
-		primary: "bg-technical-slate-900 text-white border-technical-slate-900 hover:bg-technical-slate-800",
-		secondary: "bg-brand-blue text-white border-brand-blue hover:bg-blue-600",
-		outline: "bg-transparent text-technical-slate-900 border-technical-slate-900 hover:bg-technical-slate-50"
+		primary: "bg-swiss-ink text-white border-swiss-ink hover:bg-swiss-muted hover:border-swiss-muted",
+		secondary: "bg-swiss-accent text-white border-swiss-accent hover:opacity-90",
+		outline: "bg-transparent text-swiss-ink border-swiss-ink hover:bg-swiss-ink hover:text-white"
 	};
 </script>
 

@@ -2,100 +2,100 @@
 	import Hero from '$lib/components/ui/Hero.svelte';
 
 	const metrics = [
-		{ label: 'TDD Coverage', value: '100%', trend: 'up', color: 'text-brand-green' },
-		{ label: 'SOLID Compliance', value: '94%', trend: 'up', color: 'text-brand-blue' },
-		{ label: 'Domain Isolation', value: '100%', trend: 'stable', color: 'text-brand-green' },
-		{ label: 'Cyclomatic Complexity', value: '4.2', trend: 'down', color: 'text-brand-blue' }
+		{ label: 'Cobertura TDD', value: '100%', color: 'text-brand-green' },
+		{ label: 'Conformidade SOLID', value: '94%', color: 'text-swiss-accent' },
+		{ label: 'Isolamento de Domínio', value: '100%', color: 'text-brand-green' },
+		{ label: 'Complexidade Ciclomática', value: '4.2', color: 'text-swiss-accent' }
 	];
 
 	const laws = [
-		{ name: 'Lei 1: TDD', status: 'Compliant' },
-		{ name: 'Lei 2: Clean Arch', status: 'Compliant' },
-		{ name: 'Lei 3: Context', status: 'Compliant' },
-		{ name: 'Lei 4: No summary', status: 'Compliant' },
-		{ name: 'Lei 5: YAGNI/KISS', status: 'Partial' }
+		{ name: 'Lei 1: TDD', status: 'Conforme' },
+		{ name: 'Lei 2: Clean Arch', status: 'Conforme' },
+		{ name: 'Lei 3: Contexto', status: 'Conforme' },
+		{ name: 'Lei 4: Sem Resumos', status: 'Conforme' },
+		{ name: 'Lei 5: YAGNI/KISS', status: 'Parcial' },
+		{ name: 'Lei 6: Padrão Suíço', status: 'Conforme' }
 	];
 </script>
 
 <svelte:head>
-	<title>AI-XP | Compliance</title>
-	<meta name="description" content="Real-time project health, TDD coverage and SOLID metrics." />
+	<title>AI-XP | Conformidade</title>
+	<meta name="description" content="Saúde do projeto em tempo real, cobertura TDD e métricas SOLID." />
 </svelte:head>
 
 <Hero 
-	title="Compliance Dashboard" 
-	subtitle="Automated verification of project rigor and adherence to AI-XP standards."
+	title="Auditoria de Conformidade" 
+	subtitle="Verificação automatizada da integridade arquitetural e rigor procedimental."
 />
 
-<div class="container mx-auto px-md py-2xl">
-	<div class="grid lg:grid-cols-12 gap-2xl">
+<div class="swiss-container">
+	<div class="grid lg:grid-cols-12 gap-huge">
 		
 		<!-- Main Metrics -->
 		<div class="lg:col-span-8">
-			<div class="grid md:grid-cols-2 gap-lg">
+			<span class="text-[10px] font-mono text-swiss-muted uppercase tracking-[0.3em] mb-xl block">
+				Indicadores Quantitativos / Analítica
+			</span>
+			
+			<div class="grid md:grid-cols-2 gap-px bg-swiss-divider border-hairline border-swiss-divider">
 				{#each metrics as metric}
-					<div class="border-2 border-technical-slate-900 p-xl bg-white flex flex-col gap-md">
-						<span class="text-xs font-mono font-bold uppercase tracking-widest text-technical-slate-400">
-							// {metric.label}
+					<div class="p-xl bg-white flex flex-col gap-xl">
+						<span class="text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-swiss-muted">
+							{metric.label}
 						</span>
-						<div class="flex items-baseline gap-md">
-							<span class="text-5xl font-display font-black {metric.color}">
+						<div class="flex items-baseline justify-between">
+							<span class="text-6xl font-serif font-light tracking-academic {metric.color}">
 								{metric.value}
 							</span>
-							<span class="text-xs font-mono font-bold uppercase text-technical-slate-300">
-								[{metric.trend}]
-							</span>
-						</div>
-						<div class="h-1 w-full bg-technical-slate-100 mt-md">
-							<div class="h-full bg-technical-slate-900" style="width: {metric.value.includes('%') ? metric.value : '80%'}"></div>
 						</div>
 					</div>
 				{/each}
 			</div>
 
-			<section class="mt-3xl">
-				<h2 class="text-sm font-mono font-bold uppercase tracking-[0.2em] text-brand-blue mb-xl flex items-center gap-sm">
-					<span class="w-12 h-px bg-brand-blue"></span> // Architecture Health
+			<section class="mt-huge">
+				<h2 class="text-3xl font-serif font-semibold tracking-academic text-swiss-ink mb-xl">
+					Saúde Arquitetural
 				</h2>
-				<div class="p-xl border-2 border-technical-slate-100 bg-technical-slate-50 font-mono text-sm space-y-md">
-					<p class="flex justify-between">
-						<span class="text-technical-slate-500">Domain Leakage Index:</span>
-						<span class="text-brand-green font-bold">0.00 (Zero)</span>
-					</p>
-					<p class="flex justify-between">
-						<span class="text-technical-slate-500">Inversion of Control:</span>
-						<span class="text-brand-blue font-bold">Active</span>
-					</p>
-					<p class="flex justify-between">
-						<span class="text-technical-slate-500">Atomic Commit Frequency:</span>
-						<span class="text-technical-slate-900 font-bold">High</span>
-					</p>
+				<div class="divide-y-hairline divide-swiss-divider border-y-hairline border-swiss-divider">
+					<div class="py-lg flex justify-between items-center px-md">
+						<span class="text-sm font-sans text-swiss-muted">Índice de Vazamento de Domínio:</span>
+						<span class="text-sm font-mono text-brand-green font-bold">0.00_ESTRITO</span>
+					</div>
+					<div class="py-lg flex justify-between items-center px-md">
+						<span class="text-sm font-sans text-swiss-muted">Direção de Dependência:</span>
+						<span class="text-sm font-mono text-swiss-accent font-bold">INTERNA_APENAS</span>
+					</div>
+					<div class="py-lg flex justify-between items-center px-md">
+						<span class="text-sm font-sans text-swiss-muted">Frequência de Commits Atômicos:</span>
+						<span class="text-sm font-mono text-swiss-ink font-bold">ALTA_PRECISÃO</span>
+					</div>
 				</div>
 			</section>
 		</div>
 
 		<!-- Law Adherence Sidebar -->
 		<div class="lg:col-span-4">
-			<section class="border-2 border-technical-slate-900 p-lg bg-technical-slate-950 text-white">
-				<h2 class="text-xs font-mono font-bold uppercase tracking-widest text-brand-blue mb-xl">
-					// Iron Law Adherence
+			<section class="border-hairline border-swiss-divider p-xl bg-white">
+				<h2 class="text-[10px] font-mono font-bold uppercase tracking-[0.3em] text-swiss-muted mb-xl">
+					Aderência à Doutrina
 				</h2>
 				
-				<div class="space-y-lg">
+				<div class="space-y-xl">
 					{#each laws as law}
-						<div class="flex items-center justify-between border-b border-technical-slate-800 pb-md last:border-0">
-							<span class="text-sm font-display font-bold uppercase tracking-tight">
+						<div class="flex items-center justify-between">
+							<span class="text-xs font-sans font-bold uppercase tracking-widest text-swiss-ink">
 								{law.name}
 							</span>
-							<span class="text-[10px] px-sm py-0.5 border {law.status === 'Compliant' ? 'border-brand-green text-brand-green' : 'border-yellow-500 text-yellow-500'} font-bold uppercase tracking-tighter">
+							<span class="text-[9px] px-sm py-xs border-hairline {law.status === 'Conforme' ? 'border-brand-green text-brand-green' : 'border-yellow-500 text-yellow-500'} font-mono uppercase">
 								{law.status}
 							</span>
 						</div>
 					{/each}
 				</div>
 
-				<div class="mt-xl p-md bg-technical-slate-900 border border-technical-slate-800 italic text-xs text-technical-slate-400">
-					Last automated audit: {new Date().toLocaleString()}
+				<div class="mt-huge pt-xl border-t-hairline border-swiss-divider italic text-[10px] text-swiss-muted leading-relaxed">
+					Próxima auditoria automatizada: 
+					<br/>{new Date(Date.now() + 3600000).toLocaleString()}
 				</div>
 			</section>
 		</div>

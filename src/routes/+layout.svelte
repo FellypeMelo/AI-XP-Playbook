@@ -5,27 +5,21 @@
 	let { children } = $props();
 	
 	const navLinks = [
-		{ href: '/', label: 'Command Center' },
-		{ href: '/blog', label: 'Tech Stack' },
-		{ href: '/sobre', label: 'Manifesto' }
+		{ href: '/', label: 'Centro de Comando' },
+		{ href: '/blog', label: 'Stack Técnica' },
+		{ href: '/sobre', label: 'Manifesto' },
+		{ href: '/workbench', label: 'Bancada' },
+		{ href: '/compliance', label: 'Conformidade' }
 	];
 </script>
 
-<div class="min-h-screen flex flex-col bg-white text-technical-slate-900 selection:bg-brand-blue selection:text-white">
-	<!-- Top Progress Bar (Conceptual) -->
-	<div class="h-1 bg-brand-blue w-full opacity-20"></div>
-
+<div class="min-h-screen flex flex-col bg-swiss-paper text-swiss-ink">
 	<!-- Header -->
-	<header class="border-b-2 border-technical-slate-900 sticky top-0 bg-white/80 backdrop-blur-md z-50">
-		<nav class="container mx-auto px-md py-md flex items-center justify-between">
-			<a href="/" class="group flex items-center gap-sm">
-				<div class="w-8 h-8 bg-technical-slate-900 flex items-center justify-center group-hover:bg-brand-blue transition-colors">
-					<span class="text-white font-mono font-bold text-xs">XP</span>
-				</div>
-				<div class="flex flex-col leading-none">
-					<span class="text-lg font-display font-black tracking-tighter uppercase">AI-XP</span>
-					<span class="text-[10px] font-mono font-bold text-technical-slate-400 uppercase tracking-widest">Playbook.v1</span>
-				</div>
+	<header class="border-b-hairline border-swiss-divider sticky top-0 bg-swiss-paper/80 backdrop-blur-sm z-50">
+		<nav class="max-w-7xl mx-auto px-lg py-lg flex items-center justify-between">
+			<a href="/" class="group flex flex-col items-start gap-xs">
+				<span class="text-2xl font-serif font-semibold tracking-academic leading-none">AI-XP Playbook</span>
+				<span class="text-[10px] font-mono text-swiss-muted uppercase tracking-[0.2em] leading-none">Versão 1.0.0_SWISS</span>
 			</a>
 			
 			<ul class="hidden md:flex gap-xl">
@@ -33,7 +27,7 @@
 					<li>
 						<a 
 							href={link.href} 
-							class="text-xs font-mono font-bold uppercase tracking-widest transition-all hover:text-brand-blue {$page.url.pathname === link.href ? 'text-brand-blue border-b-2 border-brand-blue' : 'text-technical-slate-500'}"
+							class="text-xs font-sans font-medium uppercase tracking-[0.1em] transition-all hover:text-swiss-accent {$page.url.pathname === link.href ? 'text-swiss-ink' : 'text-swiss-muted'}"
 						>
 							{link.label}
 						</a>
@@ -41,12 +35,8 @@
 				{/each}
 			</ul>
 
-			<!-- Mobile Menu Button (Conceptual) -->
-			<button class="md:hidden p-sm">
-				<div class="w-6 h-0.5 bg-technical-slate-900 mb-1"></div>
-				<div class="w-6 h-0.5 bg-technical-slate-900 mb-1"></div>
-				<div class="w-6 h-0.5 bg-technical-slate-900"></div>
-			</button>
+			<!-- Mobile Indicator -->
+			<div class="md:hidden w-6 h-hairline bg-swiss-ink"></div>
 		</nav>
 	</header>
 
@@ -56,24 +46,24 @@
 	</main>
 
 	<!-- Footer -->
-	<footer class="border-t-2 border-technical-slate-900 py-xl mt-3xl bg-technical-slate-50">
-		<div class="container mx-auto px-md">
-			<div class="grid md:grid-cols-2 gap-xl items-center">
+	<footer class="border-t-hairline border-swiss-divider py-2xl mt-huge bg-white">
+		<div class="max-w-7xl mx-auto px-lg">
+			<div class="grid md:grid-cols-2 gap-xl items-start">
 				<div>
-					<p class="text-xs font-mono text-technical-slate-400 uppercase tracking-widest mb-sm">
-						Built with Rigor & Agents
+					<p class="text-[10px] font-mono text-swiss-muted uppercase tracking-[0.3em] mb-sm">
+						Fundamentos da Engenharia de Alto Padrão
 					</p>
-					<p class="text-sm font-sans text-technical-slate-600">
+					<p class="text-xs font-sans text-swiss-muted leading-relaxed">
 						© {new Date().getFullYear()} AI-XP Governance Framework. 
-						<br/>Licensed under MIT + Akita-Driven Protocol.
+						<br/>Baseado no Protocolo Akita-Driven & Rigor Acadêmico Suíço.
 					</p>
 				</div>
 				<div class="flex md:justify-end gap-md">
-					<div class="px-md py-sm border border-technical-slate-200 bg-white text-[10px] font-mono uppercase tracking-tighter">
-						Status: <span class="text-brand-green font-bold">Stable</span>
+					<div class="px-md py-xs border-hairline border-swiss-divider bg-swiss-paper text-[9px] font-mono uppercase tracking-widest">
+						Status: <span class="text-brand-green font-bold">Estável</span>
 					</div>
-					<div class="px-md py-sm border border-technical-slate-200 bg-white text-[10px] font-mono uppercase tracking-tighter">
-						Compliance: <span class="text-brand-blue font-bold">100%</span>
+					<div class="px-md py-xs border-hairline border-swiss-divider bg-swiss-paper text-[9px] font-mono uppercase tracking-widest">
+						Padrão: <span class="text-swiss-ink font-bold">Swiss_04</span>
 					</div>
 				</div>
 			</div>

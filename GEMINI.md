@@ -64,6 +64,22 @@ Funções máximas: 15 linhas lógicas. Classes: <200 linhas.
 - [ ] Os castigos sistêmicos de Rollback (git checkout .) estão sendo aplicados rotineiramente para zerar alucinações cognitivas do modelo?
 ```
 
+### 🔒 Lei 7: Padrão Suíço de Documentação (Swiss Standard)
+
+```yaml
+Sistema de Design: Obrigatório "Swiss Standard"
+Tipografia:
+  - Títulos: IBM Plex Serif (Autoridade acadêmica)
+  - Corpo: IBM Plex Sans (Máxima legibilidade)
+  - Técnico: JetBrains Mono (Precisão)
+Regras Estéticas:
+  - Fundo: #f8fafc (Branco-papel)
+  - Texto: #0f172a (Preto-tinta)
+  - Divisores: Hairline (0.5px) #cbd5e1
+  - Sombras: PROIBIDO (Profundidade via camadas e divisores apenas)
+  - Margens: Massivas (Espaçamento 3xl/huge para hierarquia de informação)
+```
+
 ---
 
 ## 🏗️ ARQUITETURA MULTIAGENTES

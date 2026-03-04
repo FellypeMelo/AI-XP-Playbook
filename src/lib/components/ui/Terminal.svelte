@@ -7,21 +7,21 @@
 	}>();
 </script>
 
-<div class="bg-technical-slate-900 rounded-lg overflow-hidden border-2 border-technical-slate-800 shadow-2xl font-mono text-sm">
+<div class="bg-swiss-ink rounded-none overflow-hidden border-hairline border-swiss-ink font-mono text-sm shadow-none">
 	<!-- Title Bar -->
-	<div class="bg-technical-slate-800 px-md py-xs flex items-center gap-sm">
+	<div class="bg-swiss-ink border-b-hairline border-white/10 px-md py-sm flex items-center gap-sm">
 		<div class="flex gap-xs">
-			<div class="w-3 h-3 rounded-full bg-brand-red opacity-80"></div>
-			<div class="w-3 h-3 rounded-full bg-yellow-500 opacity-80"></div>
-			<div class="w-3 h-3 rounded-full bg-brand-green opacity-80"></div>
+			<div class="w-2 h-2 bg-brand-red"></div>
+			<div class="w-2 h-2 bg-yellow-500"></div>
+			<div class="w-2 h-2 bg-brand-green"></div>
 		</div>
-		<div class="flex-1 text-center text-technical-slate-400 text-xs select-none">
+		<div class="flex-1 text-center text-white/40 text-[10px] uppercase tracking-widest select-none">
 			{title}
 		</div>
 	</div>
 	
 	<!-- Content Area -->
-	<div class="p-md text-technical-slate-100 min-h-[200px]">
+	<div class="p-lg text-white/90 min-h-[200px] leading-relaxed">
 		{@render children?.()}
 	</div>
 </div>

@@ -3,9 +3,10 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
+				sans: ['IBM Plex Sans', 'Inter', 'system-ui', 'sans-serif'],
+				serif: ['IBM Plex Serif', 'Georgia', 'serif'],
 				mono: ['JetBrains Mono', 'monospace'],
-				display: ['Inter', 'system-ui', 'sans-serif']
+				display: ['IBM Plex Serif', 'serif']
 			},
 			colors: {
 				brand: {
@@ -13,20 +14,12 @@ export default {
 					green: '#00d68f', // TDD Green
 					blue: '#007aff', // TDD Blue (Refactor)
 				},
-				technical: {
-					slate: {
-						50: '#f8fafc',
-						100: '#f1f5f9',
-						200: '#e2e8f0',
-						300: '#cbd5e1',
-						400: '#94a3b8',
-						500: '#64748b',
-						600: '#475569',
-						700: '#334155',
-						800: '#1e293b',
-						900: '#0f172a',
-						950: '#020617',
-					}
+				swiss: {
+					paper: '#f8fafc',
+					ink: '#0f172a',
+					muted: '#64748b',
+					divider: '#cbd5e1',
+					accent: '#007aff'
 				}
 			},
 			spacing: {
@@ -37,6 +30,14 @@ export default {
 				'xl': '32px',
 				'2xl': '48px',
 				'3xl': '64px',
+				'huge': '128px',
+			},
+			borderWidth: {
+				'hairline': '0.5px',
+			},
+			letterSpacing: {
+				'swiss': '0.02em',
+				'academic': '-0.01em',
 			}
 		}
 	},
