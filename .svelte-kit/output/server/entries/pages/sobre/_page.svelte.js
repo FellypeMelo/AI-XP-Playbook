@@ -1,0 +1,16 @@
+import { ac as head } from "../../../chunks/index2.js";
+function _page($$renderer) {
+  head("x824lu", $$renderer, ($$renderer2) => {
+    $$renderer2.title(($$renderer3) => {
+      $$renderer3.push(`<title>Sobre | AI-XP Playbook</title>`);
+    });
+  });
+  $$renderer.push(`<div class="max-w-3xl mx-auto px-4 py-12"><h1 class="text-3xl font-bold tracking-tight mb-8">Sobre o AI-XP Playbook</h1> <div class="prose prose-gray prose-lg"><p>O <strong>AI-XP Playbook</strong> é um blog técnico minimalista dedicado a traduzir 
+			conceitos avançados de Engenharia de Software Agêntica em conteúdos práticos e acessíveis.</p> <h2>Missão</h2> <p>Capacitar desenvolvedores, arquitetos e times de tecnologia a utilizarem agentes de 
+			inteligência artificial de forma disciplinada, combinando:</p> <ul><li><strong>Extreme Programming (XP)</strong> — TDD, refatoração, integração contínua</li> <li><strong>Engenharia de Prompt</strong> — Técnicas de comunicação efetiva com LLMs</li> <li><strong>Orquestração Multiagente</strong> — Coordenar múltiplos agentes para tarefas complexas</li></ul> <h2>Público-alvo</h2> <p>Desenvolvedores de todos os níveis que desejam ir além do "vibe coding" e adotar 
+			uma abordagem profissional e estruturada com IA.</p> <h2>Modelo AI-XP</h2> <p>O framework AI-XP é baseado em três ciclos fundamentais:</p> <ol><li><strong>VISION</strong> — Definição de objetivos e escopo</li> <li><strong>ADAPT</strong> — Adaptação contínua através de feedback</li> <li><strong>LEAP</strong> — Evolução acelerada com práticas validadas</li></ol> <h2>Licença</h2> <p>Todo o conteúdo é licenciado sob <strong>Creative Commons BY-SA</strong>, 
+			permitindo compartilhamento e adaptação com atribuição.</p></div></div>`);
+}
+export {
+  _page as default
+};

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		@apply antialiased;
+	}
+	
+	body {
+		@apply bg-white text-black min-h-screen;
+	}
+
+	::selection {
+		@apply bg-black text-white;
+	}
+}
+
+@layer components {
+	.link-underline {
+		@apply relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-px after:bg-black after:transition-all after:duration-300 hover:after:w-full;
+	}
+}
