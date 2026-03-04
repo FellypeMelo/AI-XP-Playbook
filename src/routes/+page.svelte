@@ -1,80 +1,105 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import Hero from '$lib/components/ui/Hero.svelte';
+	import Terminal from '$lib/components/ui/Terminal.svelte';
+	import PostCard from '$lib/components/ui/PostCard.svelte';
+	import Button from '$lib/components/ui/Button.svelte';
 	
 	let { data }: { data: PageData } = $props();
+
+	const agentSteps = [
+		{ type: 'input', text: '> initiating protocol AI-XP v1.0...' },
+		{ type: 'success', text: '[OK] TDD infrastructure verified.' },
+		{ type: 'info', text: '[INFO] Scanning domain for Clean Architecture violations...' },
+		{ type: 'error', text: '[ERR] 3 leaks detected in Infrastructure layer.' },
+		{ type: 'info', text: '> applying automated refactoring...' },
+		{ type: 'success', text: '[FIXED] Domain isolated. All tests passing.' }
+	];
 </script>
 
 <svelte:head>
-	<title>AI-XP Playbook | Engenharia de Software Agêntica</title>
-	<meta name="description" content="Blog técnico sobre Extreme Programming com Agentes de IA. Aprenda TDD agêntico, orquestração multiagente e Clean Architecture." />
+	<title>AI-XP | Command Center</title>
+	<meta name="description" content="Engenharia de Software Agêntica com Rigor e Disciplina." />
 </svelte:head>
 
-<div class="max-w-4xl mx-auto px-4 py-12">
-	<!-- Hero Section -->
-	<section class="mb-16">
-		<h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
-			Engenharia de Software<br class="md:hidden" /> Agêntica
-		</h1>
-		<p class="text-xl text-gray-600 max-w-2xl">
-			Práticas disciplinadas de Extreme Programming combinadas com agentes de IA. 
-			Além do "vibe coding".
-		</p>
-	</section>
+<!-- Hero Section -->
+<Hero 
+	title="Engenharia de Software Agêntica" 
+	subtitle="Além do 'vibe coding'. Rigor matemático, Clean Architecture e TDD agêntico."
+/>
 
-	<!-- Latest Posts -->
-	<section>
-		<h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-8">
-			Últimos Artigos
-		</h2>
+<div class="container mx-auto px-md py-2xl">
+	<div class="grid lg:grid-cols-12 gap-2xl">
+		
+		<!-- Left: Philosophy & Call to Action -->
+		<div class="lg:col-span-7 flex flex-col justify-center">
+			<h2 class="text-sm font-mono font-bold uppercase tracking-[0.2em] text-brand-blue mb-md">
+				// Core Philosophy
+			</h2>
+			<div class="space-y-md mb-xl">
+				<p class="text-2xl md:text-3xl font-display font-bold leading-tight uppercase">
+					Não geramos apenas código. <br/>
+					<span class="text-technical-slate-400">Construímos sistemas determinísticos.</span>
+				</p>
+				<p class="text-lg text-technical-slate-600 font-sans leading-relaxed">
+					O AI-XP Playbook é o framework definitivo para engenheiros que utilizam LLMs para 
+					construir software de classe mundial. Substituímos a intuição agêntica por 
+					protocolos estritos de verificação.
+				</p>
+			</div>
+			
+			<div class="flex gap-md">
+				<Button label="Explorar Tech Stack" variant="primary" onclick={() => window.location.href = '/blog'} />
+				<Button label="Ler Manifesto" variant="outline" onclick={() => window.location.href = '/sobre'} />
+			</div>
+		</div>
+
+		<!-- Right: Agent Loop Simulation -->
+		<div class="lg:col-span-5">
+			<Terminal title="ai-agent-v1.sh">
+				<div class="space-y-xs font-mono text-[13px]">
+					{#each agentSteps as step}
+						<div class="flex gap-sm">
+							<span class="text-technical-slate-500">[{new Date().toLocaleTimeString()}]</span>
+							<span class={
+								step.type === 'success' ? 'text-brand-green' : 
+								step.type === 'error' ? 'text-brand-red' : 
+								step.type === 'info' ? 'text-brand-blue' : 'text-technical-slate-300'
+							}>
+								{step.text}
+							</span>
+						</div>
+					{/each}
+					<div class="flex gap-sm items-center">
+						<span class="text-technical-slate-500">[{new Date().toLocaleTimeString()}]</span>
+						<span class="animate-pulse w-2 h-4 bg-brand-blue"></span>
+					</div>
+				</div>
+			</Terminal>
+		</div>
+	</div>
+
+	<!-- Latest Entries Grid -->
+	<section class="mt-3xl">
+		<div class="flex items-center justify-between mb-xl border-b-2 border-technical-slate-100 pb-md">
+			<h2 class="text-2xl font-display font-black uppercase tracking-tighter">
+				Últimas Specs
+			</h2>
+			<a href="/blog" class="text-xs font-mono font-bold uppercase tracking-widest text-brand-blue hover:underline">
+				Ver todos →
+			</a>
+		</div>
 
 		{#if data.posts && data.posts.length > 0}
-			<div class="space-y-8">
+			<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-lg">
 				{#each data.posts as post}
-					<article class="group">
-						<a href="/blog/{post.slug}" class="block">
-							<div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6">
-								<time class="text-sm text-gray-400 w-32 shrink-0">
-									{post.date}
-								</time>
-								<div>
-									<h3 class="text-lg font-semibold group-hover:underline decoration-1 underline-offset-4">
-										{post.title}
-									</h3>
-									<p class="text-gray-600 mt-1 line-clamp-2">
-										{post.description}
-									</p>
-									{#if post.tags}
-										<div class="flex gap-2 mt-3">
-											{#each post.tags as tag}
-												<span class="text-xs px-2 py-1 bg-gray-100 text-gray-600">
-													{tag}
-												</span>
-											{/each}
-										</div>
-									{/if}
-								</div>
-							</div>
-						</a>
-					</article>
+					<PostCard {post} />
 				{/each}
 			</div>
 		{:else}
-			<p class="text-gray-500">Em breve novos artigos...</p>
+			<div class="p-2xl border-2 border-dashed border-technical-slate-200 text-center">
+				<p class="text-technical-slate-400 font-mono italic text-sm">Nenhuma spec indexada no momento.</p>
+			</div>
 		{/if}
-	</section>
-
-	<!-- About Section -->
-	<section class="mt-16 pt-12 border-t border-gray-200">
-		<div class="bg-gray-50 p-8">
-			<h2 class="text-lg font-semibold mb-3">O que é AI-XP?</h2>
-			<p class="text-gray-600 mb-4">
-				AI-XP (Artificially Intelligent eXtreme Programming) é a aplicação de práticas 
-				disciplinadas de XP — TDD, refatoração, integração contínua — no contexto de 
-				desenvolvimento com agentes de IA.
-			</p>
-			<a href="/sobre" class="text-sm font-medium underline underline-offset-4">
-				Saiba mais →
-			</a>
-		</div>
 	</section>
 </div>
