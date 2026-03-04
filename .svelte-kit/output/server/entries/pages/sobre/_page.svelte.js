@@ -1,4 +1,4 @@
-import { ac as head, e as ensure_array_like, d as escape_html } from "../../../chunks/index2.js";
+import { h as head, e as ensure_array_like, d as escape_html } from "../../../chunks/index2.js";
 import { H as Hero } from "../../../chunks/Hero.js";
 function _page($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {

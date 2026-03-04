@@ -1,15 +1,16 @@
 <script lang="ts">
 	import '../app.css';
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 	
 	let { children } = $props();
 	
 	const navLinks = [
-		{ href: '/', label: 'Centro de Comando' },
-		{ href: '/blog', label: 'Stack Técnica' },
-		{ href: '/sobre', label: 'Manifesto' },
-		{ href: '/workbench', label: 'Bancada' },
-		{ href: '/compliance', label: 'Conformidade' }
+		{ href: `${base}/`, label: 'Centro de Comando' },
+		{ href: `${base}/blog`, label: 'Stack Técnica' },
+		{ href: `${base}/sobre`, label: 'Manifesto' },
+		{ href: `${base}/workbench`, label: 'Bancada' },
+		{ href: `${base}/compliance`, label: 'Conformidade' }
 	];
 </script>
 
@@ -17,7 +18,7 @@
 	<!-- Header -->
 	<header class="border-b-hairline border-swiss-divider sticky top-0 bg-swiss-paper/80 backdrop-blur-sm z-50">
 		<nav class="max-w-7xl mx-auto px-lg py-lg flex items-center justify-between">
-			<a href="/" class="group flex flex-col items-start gap-xs">
+			<a href="{base}/" class="group flex flex-col items-start gap-xs">
 				<span class="text-2xl font-serif font-semibold tracking-academic leading-none">AI-XP Playbook</span>
 				<span class="text-[10px] font-mono text-swiss-muted uppercase tracking-[0.2em] leading-none">Versão 1.0.0_SWISS</span>
 			</a>

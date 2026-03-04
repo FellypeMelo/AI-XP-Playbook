@@ -45,6 +45,7 @@ declare module '$env/static/private' {
 	export const ANTIGRAVITY_AGENT: string;
 	export const ANTIGRAVITY_CLI_ALIAS: string;
 	export const APPDATA: string;
+	export const BUNDLED_DEBUGPY_PATH: string;
 	export const ChocolateyInstall: string;
 	export const ChocolateyLastPathUpdate: string;
 	export const CHROME_CRASHPAD_PIPE_NAME: string;
@@ -60,9 +61,13 @@ declare module '$env/static/private' {
 	export const EFC_11164_1592913036: string;
 	export const EFC_11164_2283032206: string;
 	export const EFC_11164_2775293581: string;
+	export const EFC_11164_344590478: string;
 	export const EFC_11164_3789132940: string;
 	export const FPS_BROWSER_APP_PROFILE_STRING: string;
 	export const FPS_BROWSER_USER_PROFILE_STRING: string;
+	export const GEMINI_CLI_IDE_AUTH_TOKEN: string;
+	export const GEMINI_CLI_IDE_SERVER_PORT: string;
+	export const GEMINI_CLI_IDE_WORKSPACE_PATH: string;
 	export const GIT_ASKPASS: string;
 	export const GOPATH: string;
 	export const HOME: string;
@@ -112,6 +117,9 @@ declare module '$env/static/private' {
 	export const PROMPT: string;
 	export const PSModulePath: string;
 	export const PUBLIC: string;
+	export const PYDEVD_DISABLE_FILE_VALIDATION: string;
+	export const PYTHONSTARTUP: string;
+	export const PYTHON_BASIC_REPL: string;
 	export const SESSIONNAME: string;
 	export const SystemDrive: string;
 	export const SystemRoot: string;
@@ -124,6 +132,7 @@ declare module '$env/static/private' {
 	export const USERNAME: string;
 	export const USERPROFILE: string;
 	export const VS140COMNTOOLS: string;
+	export const VSCODE_DEBUGPY_ADAPTER_ENDPOINTS: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
@@ -225,6 +234,7 @@ declare module '$env/dynamic/private' {
 		ANTIGRAVITY_AGENT: string;
 		ANTIGRAVITY_CLI_ALIAS: string;
 		APPDATA: string;
+		BUNDLED_DEBUGPY_PATH: string;
 		ChocolateyInstall: string;
 		ChocolateyLastPathUpdate: string;
 		CHROME_CRASHPAD_PIPE_NAME: string;
@@ -240,9 +250,13 @@ declare module '$env/dynamic/private' {
 		EFC_11164_1592913036: string;
 		EFC_11164_2283032206: string;
 		EFC_11164_2775293581: string;
+		EFC_11164_344590478: string;
 		EFC_11164_3789132940: string;
 		FPS_BROWSER_APP_PROFILE_STRING: string;
 		FPS_BROWSER_USER_PROFILE_STRING: string;
+		GEMINI_CLI_IDE_AUTH_TOKEN: string;
+		GEMINI_CLI_IDE_SERVER_PORT: string;
+		GEMINI_CLI_IDE_WORKSPACE_PATH: string;
 		GIT_ASKPASS: string;
 		GOPATH: string;
 		HOME: string;
@@ -292,6 +306,9 @@ declare module '$env/dynamic/private' {
 		PROMPT: string;
 		PSModulePath: string;
 		PUBLIC: string;
+		PYDEVD_DISABLE_FILE_VALIDATION: string;
+		PYTHONSTARTUP: string;
+		PYTHON_BASIC_REPL: string;
 		SESSIONNAME: string;
 		SystemDrive: string;
 		SystemRoot: string;
@@ -304,6 +321,7 @@ declare module '$env/dynamic/private' {
 		USERNAME: string;
 		USERPROFILE: string;
 		VS140COMNTOOLS: string;
+		VSCODE_DEBUGPY_ADAPTER_ENDPOINTS: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
