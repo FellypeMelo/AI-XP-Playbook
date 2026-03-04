@@ -14,5 +14,8 @@
 	],
 	"/sobre": [
 		"src/routes/+layout.ts"
+	],
+	"/workbench": [
+		"src/routes/+layout.ts"
 	]
 }
