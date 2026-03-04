@@ -32,19 +32,21 @@ function _layout($$renderer, $$props) {
     var $$store_subs;
     let { children } = $$props;
     const navLinks = [
-      { href: "/", label: "Início" },
-      { href: "/blog", label: "Artigos" },
-      { href: "/sobre", label: "Sobre" }
+      { href: "/", label: "Centro de Comando" },
+      { href: "/blog", label: "Stack Técnica" },
+      { href: "/sobre", label: "Manifesto" },
+      { href: "/workbench", label: "Bancada" },
+      { href: "/compliance", label: "Conformidade" }
     ];
-    $$renderer2.push(`<div class="min-h-screen flex flex-col"><header class="border-b border-gray-200 py-4"><nav class="max-w-4xl mx-auto px-4 flex items-center justify-between"><a href="/" class="text-xl font-bold tracking-tight">AI-XP <span class="text-gray-500">Playbook</span></a> <ul class="flex gap-6"><!--[-->`);
+    $$renderer2.push(`<div class="min-h-screen flex flex-col bg-swiss-paper text-swiss-ink"><header class="border-b-hairline border-swiss-divider sticky top-0 bg-swiss-paper/80 backdrop-blur-sm z-50"><nav class="max-w-7xl mx-auto px-lg py-lg flex items-center justify-between"><a href="/" class="group flex flex-col items-start gap-xs"><span class="text-2xl font-serif font-semibold tracking-academic leading-none">AI-XP Playbook</span> <span class="text-[10px] font-mono text-swiss-muted uppercase tracking-[0.2em] leading-none">Versão 1.0.0_SWISS</span></a> <ul class="hidden md:flex gap-xl"><!--[-->`);
     const each_array = ensure_array_like(navLinks);
     for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
       let link = each_array[$$index];
-      $$renderer2.push(`<li><a${attr("href", link.href)}${attr_class(`text-sm link-underline ${stringify(store_get($$store_subs ??= {}, "$page", page).url.pathname === link.href ? "font-semibold" : "text-gray-600")}`)}>${escape_html(link.label)}</a></li>`);
+      $$renderer2.push(`<li><a${attr("href", link.href)}${attr_class(`text-xs font-sans font-medium uppercase tracking-[0.1em] transition-all hover:text-swiss-accent ${stringify(store_get($$store_subs ??= {}, "$page", page).url.pathname === link.href ? "text-swiss-ink" : "text-swiss-muted")}`)}>${escape_html(link.label)}</a></li>`);
     }
-    $$renderer2.push(`<!--]--></ul></nav></header> <main class="flex-1">`);
+    $$renderer2.push(`<!--]--></ul> <div class="md:hidden w-6 h-hairline bg-swiss-ink"></div></nav></header> <main class="flex-1">`);
     children($$renderer2);
-    $$renderer2.push(`<!----></main> <footer class="border-t border-gray-200 py-6 mt-12"><div class="max-w-4xl mx-auto px-4 text-center text-sm text-gray-500"><p>© ${escape_html((/* @__PURE__ */ new Date()).getFullYear())} AI-XP Playbook. Licença CC BY-SA.</p></div></footer></div>`);
+    $$renderer2.push(`<!----></main> <footer class="border-t-hairline border-swiss-divider py-2xl mt-huge bg-white"><div class="max-w-7xl mx-auto px-lg"><div class="grid md:grid-cols-2 gap-xl items-start"><div><p class="text-[10px] font-mono text-swiss-muted uppercase tracking-[0.3em] mb-sm">Fundamentos da Engenharia de Alto Padrão</p> <p class="text-xs font-sans text-swiss-muted leading-relaxed">© ${escape_html((/* @__PURE__ */ new Date()).getFullYear())} AI-XP Governance Framework. <br/>Baseado no Protocolo Akita-Driven &amp; Rigor Acadêmico Suíço.</p></div> <div class="flex md:justify-end gap-md"><div class="px-md py-xs border-hairline border-swiss-divider bg-swiss-paper text-[9px] font-mono uppercase tracking-widest">Status: <span class="text-brand-green font-bold">Estável</span></div> <div class="px-md py-xs border-hairline border-swiss-divider bg-swiss-paper text-[9px] font-mono uppercase tracking-widest">Padrão: <span class="text-swiss-ink font-bold">Swiss_04</span></div></div></div></div></footer></div>`);
     if ($$store_subs) unsubscribe_stores($$store_subs);
   });
 }

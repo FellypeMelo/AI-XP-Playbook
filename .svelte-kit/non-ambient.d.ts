@@ -41,6 +41,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/" | "/blog/" | `/blog/${string}/` & {} | "/compliance/" | "/sobre/" | "/workbench/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/favicon.png" | "/vite.svg" | string & {};
+		Asset(): "/docs/pdfs/Análise Profunda de Site para IA.pdf" | "/docs/pdfs/IA como Arquiteto de Software Sênior.pdf" | "/docs/pdfs/XP com Agentes de IA_ Tratado Técnico.pdf" | "/favicon.png" | "/vite.svg" | string & {};
 	}
 }

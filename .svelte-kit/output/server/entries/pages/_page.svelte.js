@@ -1,44 +1,82 @@
-import { ac as head, e as ensure_array_like, a as attr, s as stringify, d as escape_html } from "../../chunks/index2.js";
+import { ac as head, e as ensure_array_like, d as escape_html, b as attr_class, ad as clsx } from "../../chunks/index2.js";
+import { H as Hero } from "../../chunks/Hero.js";
+import { B as Button, T as Terminal } from "../../chunks/Button.js";
+import { P as PostCard } from "../../chunks/PostCard.js";
 function _page($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     let { data } = $$props;
+    const agentSteps = [
+      { type: "input", text: "> iniciando protocolo AI-XP v1.0..." },
+      { type: "success", text: "[OK] infraestrutura TDD verificada." },
+      {
+        type: "info",
+        text: "[INFO] Escaneando domínio por violações de Clean Architecture..."
+      },
+      {
+        type: "error",
+        text: "[ERR] 3 vazamentos detectados na camada de Infraestrutura."
+      },
+      {
+        type: "info",
+        text: "> aplicando refatoração automatizada..."
+      },
+      {
+        type: "success",
+        text: "[FIXED] Domínio isolado. Todos os testes passando."
+      }
+    ];
     head("1uha8ag", $$renderer2, ($$renderer3) => {
       $$renderer3.title(($$renderer4) => {
-        $$renderer4.push(`<title>AI-XP Playbook | Engenharia de Software Agêntica</title>`);
+        $$renderer4.push(`<title>AI-XP | Centro de Comando</title>`);
       });
-      $$renderer3.push(`<meta name="description" content="Blog técnico sobre Extreme Programming com Agentes de IA. Aprenda TDD agêntico, orquestração multiagente e Clean Architecture."/>`);
+      $$renderer3.push(`<meta name="description" content="Engenharia de Software Agêntica com Rigor e Disciplina."/>`);
     });
-    $$renderer2.push(`<div class="max-w-4xl mx-auto px-4 py-12"><section class="mb-16"><h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">Engenharia de Software<br class="md:hidden"/> Agêntica</h1> <p class="text-xl text-gray-600 max-w-2xl">Práticas disciplinadas de Extreme Programming combinadas com agentes de IA. 
-			Além do "vibe coding".</p></section> <section><h2 class="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-8">Últimos Artigos</h2> `);
+    Hero($$renderer2, {
+      title: "Engenharia com Rigor Acadêmico",
+      subtitle: "Além do vibe coding. Precisão matemática, Clean Architecture e TDD Agêntico."
+    });
+    $$renderer2.push(`<!----> <div class="swiss-container"><div class="grid lg:grid-cols-12 gap-huge items-start"><div class="lg:col-span-7"><span class="text-[10px] font-mono text-swiss-muted uppercase tracking-[0.3em] mb-lg block">Doutrina Primária / 01</span> <div class="space-y-xl mb-2xl"><h2 class="text-4xl md:text-5xl font-serif font-semibold tracking-academic leading-tight text-swiss-ink">Não apenas geramos código. <br/> <span class="text-swiss-muted">Arquitetamos sistemas determinísticos.</span></h2> <p class="text-lg text-swiss-muted font-sans leading-relaxed max-w-xl">O AI-XP Playbook é o framework definitivo para engenheiros que utilizam LLMs para 
+					construir software de classe mundial. Substituímos a intuição agêntica por 
+					protocolos estritos de verificação.</p></div> <div class="flex flex-wrap gap-md">`);
+    Button($$renderer2, {
+      label: "Stack Técnica",
+      variant: "primary",
+      onclick: () => window.location.href = "/blog"
+    });
+    $$renderer2.push(`<!----> `);
+    Button($$renderer2, {
+      label: "Manifesto",
+      variant: "outline",
+      onclick: () => window.location.href = "/sobre"
+    });
+    $$renderer2.push(`<!----></div></div> <div class="lg:col-span-5">`);
+    Terminal($$renderer2, {
+      title: "ai-agent-v1.sh",
+      children: ($$renderer3) => {
+        $$renderer3.push(`<div class="space-y-xs font-mono text-[12px]"><!--[-->`);
+        const each_array = ensure_array_like(agentSteps);
+        for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
+          let step = each_array[$$index];
+          $$renderer3.push(`<div class="flex gap-sm"><span class="text-white/20">[${escape_html((/* @__PURE__ */ new Date()).toLocaleTimeString())}]</span> <span${attr_class(clsx(step.type === "success" ? "text-brand-green" : step.type === "error" ? "text-brand-red" : step.type === "info" ? "text-brand-blue" : "text-white/60"))}>${escape_html(step.text)}</span></div>`);
+        }
+        $$renderer3.push(`<!--]--> <div class="flex gap-sm items-center"><span class="text-white/20">[${escape_html((/* @__PURE__ */ new Date()).toLocaleTimeString())}]</span> <span class="animate-pulse w-1.5 h-3 bg-swiss-accent"></span></div></div>`);
+      }
+    });
+    $$renderer2.push(`<!----></div></div> <section class="mt-huge"><div class="flex items-end justify-between mb-2xl border-b-hairline border-swiss-divider pb-lg"><div><span class="text-[10px] font-mono text-swiss-muted uppercase tracking-[0.3em] mb-xs block">Arquivo</span> <h2 class="text-3xl font-serif font-semibold tracking-academic text-swiss-ink uppercase">Últimas Specs</h2></div> <a href="/blog" class="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-swiss-muted hover:text-swiss-ink transition-colors pb-1">Ver Índice →</a></div> `);
     if (data.posts && data.posts.length > 0) {
       $$renderer2.push("<!--[0-->");
-      $$renderer2.push(`<div class="space-y-8"><!--[-->`);
-      const each_array = ensure_array_like(data.posts);
-      for (let $$index_1 = 0, $$length = each_array.length; $$index_1 < $$length; $$index_1++) {
-        let post = each_array[$$index_1];
-        $$renderer2.push(`<article class="group"><a${attr("href", `/blog/${stringify(post.slug)}`)} class="block"><div class="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-6"><time class="text-sm text-gray-400 w-32 shrink-0">${escape_html(post.date)}</time> <div><h3 class="text-lg font-semibold group-hover:underline decoration-1 underline-offset-4">${escape_html(post.title)}</h3> <p class="text-gray-600 mt-1 line-clamp-2">${escape_html(post.description)}</p> `);
-        if (post.tags) {
-          $$renderer2.push("<!--[0-->");
-          $$renderer2.push(`<div class="flex gap-2 mt-3"><!--[-->`);
-          const each_array_1 = ensure_array_like(post.tags);
-          for (let $$index = 0, $$length2 = each_array_1.length; $$index < $$length2; $$index++) {
-            let tag = each_array_1[$$index];
-            $$renderer2.push(`<span class="text-xs px-2 py-1 bg-gray-100 text-gray-600">${escape_html(tag)}</span>`);
-          }
-          $$renderer2.push(`<!--]--></div>`);
-        } else {
-          $$renderer2.push("<!--[-1-->");
-        }
-        $$renderer2.push(`<!--]--></div></div></a></article>`);
+      $$renderer2.push(`<div class="flex flex-col"><!--[-->`);
+      const each_array_1 = ensure_array_like(data.posts);
+      for (let $$index_1 = 0, $$length = each_array_1.length; $$index_1 < $$length; $$index_1++) {
+        let post = each_array_1[$$index_1];
+        PostCard($$renderer2, { post });
       }
       $$renderer2.push(`<!--]--></div>`);
     } else {
       $$renderer2.push("<!--[-1-->");
-      $$renderer2.push(`<p class="text-gray-500">Em breve novos artigos...</p>`);
+      $$renderer2.push(`<div class="py-huge border-hairline border-dashed border-swiss-divider text-center"><p class="text-swiss-muted font-mono italic text-sm tracking-widest uppercase">Nenhuma spec indexada no momento.</p></div>`);
     }
-    $$renderer2.push(`<!--]--></section> <section class="mt-16 pt-12 border-t border-gray-200"><div class="bg-gray-50 p-8"><h2 class="text-lg font-semibold mb-3">O que é AI-XP?</h2> <p class="text-gray-600 mb-4">AI-XP (Artificially Intelligent eXtreme Programming) é a aplicação de práticas 
-				disciplinadas de XP — TDD, refatoração, integração contínua — no contexto de 
-				desenvolvimento com agentes de IA.</p> <a href="/sobre" class="text-sm font-medium underline underline-offset-4">Saiba mais →</a></div></section></div>`);
+    $$renderer2.push(`<!--]--></section></div>`);
   });
 }
 export {

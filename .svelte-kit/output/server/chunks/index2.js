@@ -3033,6 +3033,7 @@ export {
   setContext as aa,
   derived as ab,
   head as ac,
+  clsx as ad,
   attr_class as b,
   store_get as c,
   escape_html as d,

@@ -1,41 +1,25 @@
-import { ac as head, e as ensure_array_like, a as attr, s as stringify, d as escape_html } from "../../../chunks/index2.js";
+import { ac as head, d as escape_html, e as ensure_array_like } from "../../../chunks/index2.js";
+import { P as PostCard } from "../../../chunks/PostCard.js";
+import { H as Hero } from "../../../chunks/Hero.js";
 function _page($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     let { data } = $$props;
     head("u4k2t", $$renderer2, ($$renderer3) => {
       $$renderer3.title(($$renderer4) => {
-        $$renderer4.push(`<title>Artigos | AI-XP Playbook</title>`);
+        $$renderer4.push(`<title>Stack Técnica | AI-XP Playbook</title>`);
       });
-      $$renderer3.push(`<meta name="description" content="Todos os artigos sobre Engenharia de Software Agêntica, TDD agêntico e práticas de XP com IA."/>`);
     });
-    $$renderer2.push(`<div class="max-w-4xl mx-auto px-4 py-12"><h1 class="text-3xl font-bold tracking-tight mb-8">Artigos</h1> `);
-    if (data.posts && data.posts.length > 0) {
-      $$renderer2.push("<!--[0-->");
-      $$renderer2.push(`<div class="space-y-8"><!--[-->`);
-      const each_array = ensure_array_like(data.posts);
-      for (let $$index_1 = 0, $$length = each_array.length; $$index_1 < $$length; $$index_1++) {
-        let post = each_array[$$index_1];
-        $$renderer2.push(`<article class="group border-b border-gray-100 pb-8"><a${attr("href", `/blog/${stringify(post.slug)}`)} class="block"><div class="flex flex-col gap-2"><time class="text-sm text-gray-400">${escape_html(post.date)}</time> <h2 class="text-xl font-semibold group-hover:underline decoration-1 underline-offset-4">${escape_html(post.title)}</h2> <p class="text-gray-600">${escape_html(post.description)}</p> `);
-        if (post.tags) {
-          $$renderer2.push("<!--[0-->");
-          $$renderer2.push(`<div class="flex gap-2 mt-2"><!--[-->`);
-          const each_array_1 = ensure_array_like(post.tags);
-          for (let $$index = 0, $$length2 = each_array_1.length; $$index < $$length2; $$index++) {
-            let tag = each_array_1[$$index];
-            $$renderer2.push(`<span class="text-xs px-2 py-1 bg-gray-100 text-gray-600">${escape_html(tag)}</span>`);
-          }
-          $$renderer2.push(`<!--]--></div>`);
-        } else {
-          $$renderer2.push("<!--[-1-->");
-        }
-        $$renderer2.push(`<!--]--></div></a></article>`);
-      }
-      $$renderer2.push(`<!--]--></div>`);
-    } else {
-      $$renderer2.push("<!--[-1-->");
-      $$renderer2.push(`<p class="text-gray-500">Em breve...</p>`);
+    Hero($$renderer2, {
+      title: "Índice da Stack Técnica",
+      subtitle: "As escolhas arquiteturais e padrões agênticos que definem o software de alto padrão."
+    });
+    $$renderer2.push(`<!----> <div class="swiss-container"><div class="flex items-end justify-between mb-2xl border-b-hairline border-swiss-divider pb-lg"><div><span class="text-[10px] font-mono text-swiss-muted uppercase tracking-[0.3em] mb-xs block">Registro</span> <h2 class="text-3xl font-serif font-semibold tracking-academic text-swiss-ink uppercase">Todas as Especificações</h2></div> <span class="text-[10px] font-mono text-swiss-muted uppercase tracking-[0.2em] pb-1">${escape_html(data.posts.length)} entradas_encontradas</span></div> <div class="flex flex-col"><!--[-->`);
+    const each_array = ensure_array_like(data.posts);
+    for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
+      let post = each_array[$$index];
+      PostCard($$renderer2, { post });
     }
-    $$renderer2.push(`<!--]--></div>`);
+    $$renderer2.push(`<!--]--></div></div>`);
   });
 }
 export {
