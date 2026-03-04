@@ -12,6 +12,9 @@
 		"src/routes/blog/[slug]/+page.ts",
 		"src/routes/+layout.ts"
 	],
+	"/compliance": [
+		"src/routes/+layout.ts"
+	],
 	"/sobre": [
 		"src/routes/+layout.ts"
 	],

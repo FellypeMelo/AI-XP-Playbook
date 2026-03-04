@@ -27,7 +27,7 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/blog" | "/blog/[slug]" | "/sobre" | "/workbench";
+		RouteId(): "/" | "/blog" | "/blog/[slug]" | "/compliance" | "/sobre" | "/workbench";
 		RouteParams(): {
 			"/blog/[slug]": { slug: string }
 		};
@@ -35,10 +35,11 @@ declare module "$app/types" {
 			"/": { slug?: string };
 			"/blog": { slug?: string };
 			"/blog/[slug]": { slug: string };
+			"/compliance": Record<string, never>;
 			"/sobre": Record<string, never>;
 			"/workbench": Record<string, never>
 		};
-		Pathname(): "/" | "/blog/" | `/blog/${string}/` & {} | "/sobre/" | "/workbench/";
+		Pathname(): "/" | "/blog/" | `/blog/${string}/` & {} | "/compliance/" | "/sobre/" | "/workbench/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/favicon.png" | "/vite.svg" | string & {};
 	}
